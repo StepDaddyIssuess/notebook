@@ -10,6 +10,7 @@ morgan.token('post-data', (req, res) => {
 });
 app.use(morgan(':method :url :status :post-data - :response-time ms '))
 app.use(cors())
+app.use(express.static('dist'))
 
 let notes = [
     {
