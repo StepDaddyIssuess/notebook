@@ -1,4 +1,4 @@
-const Note = ({note, toggleImportance}) => {
+const Note = ({note, toggleImportance, handleDelete}) => {
     // console.log(props.note.content)
 
     // conditionally render label
@@ -10,6 +10,7 @@ const Note = ({note, toggleImportance}) => {
         <li className="note">
             {note.content}
             <button onClick={toggleImportance}>{label}</button>
+            <button onClick={() => {handleDelete(note.id)}}>Delete</button>
         </li>
     )
 }
