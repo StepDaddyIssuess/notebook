@@ -13,7 +13,7 @@ morgan.token('post-data', (req, res) => {
 });
 app.use(morgan(':method :url :status :post-data - :response-time ms '))
 app.use(cors())
-// app.use(express.static('dist'));
+app.use(express.static('dist'));
 
 
 const requestLogger = (request, response, next) => {
